@@ -1,0 +1,99 @@
+version: '3.9'
+
+volumes:
+  pg_data_user:
+  pg_data_authority:
+  pg_data_comment:
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    expose:
+      - '80'
+    ports:
+      - '80:80'
+    depends_on:
+      - authorization-ms
+      - comment-ms
+      - subscribe-ms
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+  db-user:
+    image: 'postgres'
+    container_name: db-user
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=user
+    volumes:
+      - pg_data_user:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+  db-authority:
+    image: 'postgres'
+    container_name: db-authority
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=authority
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=authority
+    volumes:
+      - pg_data_authority:/var/lib/postgresql/data
+    ports:
+      - '5434:5432'
+  db-comment:
+    image: 'postgres'
+    container_name: db-comment
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=comment
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=comment
+    volumes:
+      - pg_data_comment:/var/lib/postgresql/data
+    ports:
+      - '5435:5432'
+  authorization-ms:
+    build: authorization/
+    container_name: authorization-ms
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db-user
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-user:5432/user
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=password
+  subscribe-ms:
+    build: subscribe/
+    container_name: subscribe-ms
+    expose:
+      - '8080'
+    ports:
+      - '8081:8080'
+    depends_on:
+      - db-authority
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-authority:5432/authority
+      - SPRING_DATASOURCE_USERNAME=authority
+      - SPRING_DATASOURCE_PASSWORD=password
+  comment-ms:
+    build: comment/
+    container_name: comment-ms
+    expose:
+      - '8080'
+    ports:
+      - '8082:8080'
+    depends_on:
+      - db-comment
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-comment:5432/comment
+      - SPRING_DATASOURCE_USERNAME=comment
+      - SPRING_DATASOURCE_PASSWORD=password

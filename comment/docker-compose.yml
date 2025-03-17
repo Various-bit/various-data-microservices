@@ -1,0 +1,17 @@
+volumes:
+  pg_dataVD:
+
+services:
+  db:
+    image: 'postgres'
+    container_name: dbVD
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=rootroot
+      - POSTGRES_DB=comment
+    volumes:
+      - pg_dataVD:/var/lib/postgresql/data
+    ports:
+      - '127.0.0.1:5433:5432'
