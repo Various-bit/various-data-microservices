@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="" />
+    <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/controller/ReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/entity/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/repository/ReportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/service/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/service/impl/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/AuthorizationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/AuthorizationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/HealthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +29,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -49,9 +63,10 @@
     &quot;Spring Boot.CommentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SubscribeApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.VariousDataMicroservicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/comment&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/support/src/main/java/org/example/support&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,11 +82,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/support/src/main/java/org/example/support" />
+      <recent name="$PROJECT_DIR$/support" />
       <recent name="$PROJECT_DIR$/comment" />
       <recent name="$PROJECT_DIR$/subscribe" />
       <recent name="$PROJECT_DIR$/authorization" />
-      <recent name="$PROJECT_DIR$/comment/src/main/java/org/example/comment/config" />
-      <recent name="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/comment" />
@@ -80,11 +95,11 @@
       <recent name="org.example.authorization" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.support.controller" />
+      <recent name="org.example.subscribe.controller" />
       <recent name="org.example.subscribe.entity" />
       <recent name="org.example.authorization.config" />
       <recent name="org.example.authorization.config.error" />
-      <recent name="org.example.authorization.dto" />
-      <recent name="org.example.authorization.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -165,7 +180,9 @@
       <workItem from="1742105678809" duration="1427000" />
       <workItem from="1742115608684" duration="3044000" />
       <workItem from="1742151427311" duration="3384000" />
-      <workItem from="1742219369948" duration="1690000" />
+      <workItem from="1742219369948" duration="2719000" />
+      <workItem from="1742227562601" duration="3990000" />
+      <workItem from="1742235462345" duration="2465000" />
     </task>
     <servers />
   </component>

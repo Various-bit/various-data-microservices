@@ -4,6 +4,7 @@ volumes:
   pg_data_user:
   pg_data_authority:
   pg_data_comment:
+  pg_data_report:
 
 services:
   nginx:
@@ -17,6 +18,7 @@ services:
       - authorization-ms
       - comment-ms
       - subscribe-ms
+      - report-ms
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
   db-user:
@@ -58,6 +60,19 @@ services:
       - pg_data_comment:/var/lib/postgresql/data
     ports:
       - '5435:5432'
+  db-report:
+    image: 'postgres'
+    container_name: db-report
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=report
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=report
+    volumes:
+      - pg_data_report:/var/lib/postgresql/data
+    ports:
+      - '5436:5432'
   authorization-ms:
     build: authorization/
     container_name: authorization-ms
@@ -96,4 +111,17 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db-comment:5432/comment
       - SPRING_DATASOURCE_USERNAME=comment
+      - SPRING_DATASOURCE_PASSWORD=password
+  report-ms:
+    build: support/
+    container_name: report-ms
+    expose:
+      - '8080'
+    ports:
+      - '8083:8080'
+    depends_on:
+      - db-report
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-report:5432/report
+      - SPRING_DATASOURCE_USERNAME=report
       - SPRING_DATASOURCE_PASSWORD=password
