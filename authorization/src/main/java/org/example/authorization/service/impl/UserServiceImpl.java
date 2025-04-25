@@ -24,9 +24,9 @@ import java.util.UUID;
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
-    private UserRepository userRepository;
-    private AuthenticationManager authenticationManager;
-    private JWTService jwtService;
+    private final UserRepository userRepository;
+    private final AuthenticationManager authenticationManager;
+    private final JWTService jwtService;
 
 
     public void registerUser(User user) throws IOException, InterruptedException {

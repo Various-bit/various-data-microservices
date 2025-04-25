@@ -1,0 +1,118 @@
+openapi: 3.0.3
+info:
+  title: "Various Data API"
+  description: "Description of the purpose of your service"
+  version: "1.0.0"
+  termsOfService: "https://myproject.ru/terms"
+  contact:
+    name: Ванька Петров
+    email: user@gmail.com
+servers:
+  - url: https://127.0.0.1/api/
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths: 
+  /comments:
+    get:
+      description: get all comments
+      responses:
+        '200':
+          description: "Список комментариев"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "models.yaml#/components/schemas/CommentResponse"
+
+    post:
+      description: "Создание комментария"
+      security: 
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "models.yaml#/components/schemas/Comment"
+        required: true
+      responses:
+        '201':
+          description: OK
+  /auth/signup:
+    post:
+      description: signup
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: "models.yaml#/components/schemas/SignupRequest"
+      responses:
+        '201':
+          description: OK
+        '200':
+          description: email used
+  /auth/login:
+    post:
+      description: login user by username/email + password
+      requestBody:
+        content:
+          application/json:
+              schema:
+                $ref: "models.yaml#/components/schemas/LoginRequest"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "models.yaml#/components/schemas/JWT"
+          description: OK
+        '401':
+          description: Unathorized
+  /auth/refresh:
+    post:
+      description: refresh accessToken
+      requestBody:
+        content:
+          application/json:
+              schema:
+                $ref: "models.yaml#/components/schemas/RefreshToken"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "models.yaml#/components/schemas/RefreshToken"
+          description: OK
+        '401':
+          description: Invalid token
+  /report:
+    post:
+      description: push report from user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "models.yaml#/components/schemas/Report"
+      responses:
+        '200':
+          description: OK
+  
+  /reports:
+    get:
+      description: get all reports
+      security: 
+        - bearerAuth: [admin]
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "models.yaml#/components/schemas/Report"
+          description: All reports
+    

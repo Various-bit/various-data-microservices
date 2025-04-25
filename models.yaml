@@ -1,0 +1,95 @@
+components:
+  schemas:
+    CommentResponse:
+      type: object
+      description: Комментарий для отображения на стороне клиента
+      properties:
+        user: string
+        comment: string
+      required:
+        - user
+        - comment
+      example: { user: "Иван", comment: "Комментарий" }
+
+    Comment:
+      type: object
+      description: Создание комментария
+      properties:
+        comment: string
+      required:
+        - comment
+      example: { comment: "Комментарий" }
+
+    SignupRequest:
+      type: object
+      description: Регистрация пользователя
+      propeties:
+        username: string
+        email: string
+        password: string
+      required:
+        - username
+        - email
+        - password
+      example:
+        {
+          username: "Иван Иванов",
+          email: "test@example.com",
+          password: "Pas$Word",
+        }
+
+    LoginRequest:
+      type: object
+      description: Авторизация пользователя либо по username либо по email
+      propeties:
+        username: string
+        password: string
+      required:
+        - username
+        - password
+      example: { 
+        username: "Иван Иванов",
+        password: "Pas$Word" 
+      }
+
+    JWT:
+      type: object
+      description: JWT acces and refresh token
+      properties:
+        accessToken: str
+        refreshToken: str
+      required:
+        - accesToken
+        - refreshToken
+      example: {
+        accesToken: "eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNjg2OGZlOTEtZjY0NC00ZWUzLWFkYTItMTE0YjNjMjc2MzQ1Iiwic3ViIjoiYWRtaW4iLCJpYXQiOjE3NDQzMTg3MzMsImV4cCI6MTc0NDMyMDUzM30.mR8yocTWtZ-MLXczv96xecVjAD457fsBNO-n4-Eyve8",
+        refreshToken: "eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNjg2OGZlOTEtZjY0NC00ZWUzLWFkYTItMTE0YjNjMjc2MzQ1Iiwic3ViIjoiYWRtaW4iLCJpYXQiOjE3NDQzMTg3MzMsImV4cCI6MTc0NDQ5ODczM30.7Bu4P07coQWL9iMyd6WJ4GsVxTXMoWMhk-EymkYGItE"
+      }
+
+    RefreshToken:
+      type: object
+      description: JWT access token
+      properties:
+        refreshToken: str
+      required:
+        - refreshToken
+      example: {
+        accessToken: "eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNjg2OGZlOTEtZjY0NC00ZWUzLWFkYTItMTE0YjNjMjc2MzQ1Iiwic3ViIjoiYWRtaW4iLCJpYXQiOjE3NDQzMTg3MzMsImV4cCI6MTc0NDQ5ODczM30.7Bu4P07coQWL9iMyd6WJ4GsVxTXMoWMhk-EymkYGItE"
+      }
+
+    Report:
+      type: object
+      description: report from user
+      properties:
+        username: str
+        email: str
+        report: str
+      required:
+        - username
+        - email
+        - report
+      example: {
+        username: "Иван Иванов",
+        email: "test@example.com",
+        report: "report"
+      }

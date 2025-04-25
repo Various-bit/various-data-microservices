@@ -6,6 +6,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.example.authorization.dto.UserPrincipal;
+import org.example.authorization.entity.User;
+import org.example.authorization.repository.UserRepository;
 import org.example.authorization.service.JWTService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,7 +17,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.servlet.HandlerMapping;
 
 import java.io.IOException;
 import java.net.URI;
@@ -27,9 +28,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @Component
 public class JwtFilter extends OncePerRequestFilter {
-    private final HandlerMapping resourceHandlerMapping;
-    private JWTService jwtService;
-    private ApplicationContext applicationContext;
+    private final JWTService jwtService;
+    private final ApplicationContext applicationContext;
+    private final UserRepository userRepository;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -37,6 +38,7 @@ public class JwtFilter extends OncePerRequestFilter {
         String authorizationHeader = request.getHeader("Authorization");
         String jwtToken = null;
         String username = null;
+        String email = null;
         UUID uuid = null;
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwtToken = authorizationHeader.substring(7);
@@ -53,11 +55,13 @@ public class JwtFilter extends OncePerRequestFilter {
                 String authority = null;
                 try {
                     authority = getAuthority(uuid);
+                    email = userRepository.findByUuid(uuid).map(User::getEmail).orElse(null);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
                 response.addHeader("X-Username", username);
                 response.addHeader("X-UUID", uuid.toString());
+                response.addHeader("X-Email", email);
                 response.addHeader("X-Authority", authority);
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
             }

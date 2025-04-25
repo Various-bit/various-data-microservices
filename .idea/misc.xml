@@ -4,23 +4,21 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Authoriation/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
         <option value="$PROJECT_DIR$/authorization/pom.xml" />
-        <option value="$PROJECT_DIR$/authorization/comment/pom.xml" />
-        <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/comment/pom.xml" />
-        <option value="$PROJECT_DIR$/authorization/subscribe/pom.xml" />
-        <option value="$PROJECT_DIR$/subscribe/pom.xml" />
+        <option value="$PROJECT_DIR$/tracker/pom.xml" />
         <option value="$PROJECT_DIR$/support/pom.xml" />
+        <option value="$PROJECT_DIR$/subscribe/pom.xml" />
+        <option value="$PROJECT_DIR$/scrap/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/authorization/comment/pom.xml" />
-        <option value="$PROJECT_DIR$/authorization/subscribe/pom.xml" />
-        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK" />
 </project>

@@ -8,30 +8,36 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="authorization" />
-        <module name="comment" />
         <module name="subscribe" />
+        <module name="comment" />
       </profile>
-      <profile name="Annotation profile for support" enabled="true">
+      <profile name="Annotation profile for tracker" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+        <module name="tracker" />
         <module name="support" />
+        <module name="scrap" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin" target="1.5" />
       <module name="demo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="" />
       <module name="authorization" options="-parameters" />
       <module name="comment" options="-parameters" />
       <module name="demo" options="" />
+      <module name="scrap" options="-parameters" />
       <module name="subscribe" options="-parameters" />
       <module name="support" options="-parameters" />
+      <module name="tracker" options="-parameters" />
     </option>
   </component>
 </project>
