@@ -3,9 +3,9 @@ package org.example.scrap.controller;
 
 import lombok.AllArgsConstructor;
 import org.example.scrap.entity.ProductOrder;
-import org.example.scrap.entity.SiteOrder;
+import org.example.scrap.entity.CompanyOrder;
 import org.example.scrap.repository.ProductOrderRepository;
-import org.example.scrap.repository.SiteOrderRepository;
+import org.example.scrap.repository.CompanyOrderRepository;
 import org.example.scrap.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,25 +21,25 @@ public class ProductController {
 
     OrderService orderService;
     ProductOrderRepository productOrderRepository;
-    SiteOrderRepository siteOrderRepository;
+    CompanyOrderRepository siteOrderRepository;
 
     @PostMapping("/product")
-    public ResponseEntity<?> crateOrder(@RequestBody ProductOrder productOrder, @RequestHeader("X-Email") String email,
+    public ResponseEntity<?> crateProductOrder(@RequestBody ProductOrder productOrder, @RequestHeader("X-Email") String email,
                                         @RequestHeader("X-UUID") UUID userUuid) {
         orderService.createProductOrder(productOrder, email, userUuid);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PostMapping("/site")
-    public ResponseEntity<?> crateOrder(@RequestBody SiteOrder siteOrder, @RequestHeader("X-Email") String email,
+    @PostMapping("/company")
+    public ResponseEntity<?> crateCompanyOrder(@RequestBody CompanyOrder companyOrder, @RequestHeader("X-Email") String email,
                                         @RequestHeader("X-UUID") UUID userUuid) {
-        orderService.createSiteOrder(siteOrder, email, userUuid);
+        orderService.createSiteOrder(companyOrder, email, userUuid);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PostMapping("/accepted-site")
-    public ResponseEntity<?> acceptSiteOrder(@RequestBody Long id) {
-        orderService.acceptedSiteOrder(id);
+    @PostMapping("/accepted-company")
+    public ResponseEntity<?> acceptCompanyOrder(@RequestBody Long id) {
+        orderService.acceptedCompanyOrder(id);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
@@ -50,12 +50,12 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public List<ProductOrder> getOrders() {
+    public List<ProductOrder> getProducts() {
         return productOrderRepository.findAll();
     }
 
-    @GetMapping("/sites")
-    public List<SiteOrder> getSites() {
+    @GetMapping("/companies")
+    public List<CompanyOrder> getCompanies() {
         return siteOrderRepository.findAll();
     }
 

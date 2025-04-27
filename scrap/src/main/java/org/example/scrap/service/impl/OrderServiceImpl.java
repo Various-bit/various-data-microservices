@@ -2,9 +2,9 @@ package org.example.scrap.service.impl;
 
 import lombok.AllArgsConstructor;
 import org.example.scrap.entity.ProductOrder;
-import org.example.scrap.entity.SiteOrder;
+import org.example.scrap.entity.CompanyOrder;
 import org.example.scrap.repository.ProductOrderRepository;
-import org.example.scrap.repository.SiteOrderRepository;
+import org.example.scrap.repository.CompanyOrderRepository;
 import org.example.scrap.service.OrderService;
 import org.springframework.stereotype.Service;
 
@@ -21,14 +21,14 @@ import java.util.UUID;
 public class OrderServiceImpl implements OrderService {
 
     ProductOrderRepository productOrderRepository;
-    SiteOrderRepository siteOrderRepository;
+    CompanyOrderRepository companyOrderRepository;
 
-    public void createSiteOrder(SiteOrder siteOrder, String email, UUID userUuid) {
-        siteOrder.setCreateDate(new Date(System.currentTimeMillis()));
-        siteOrder.setEmail(email);
-        siteOrder.setUserUuid(userUuid);
-        siteOrder.setUuid(UUID.randomUUID());
-        siteOrderRepository.save(siteOrder);
+    public void createSiteOrder(CompanyOrder companyOrder, String email, UUID userUuid) {
+        companyOrder.setCreateDate(new Date(System.currentTimeMillis()));
+        companyOrder.setEmail(email);
+        companyOrder.setUserUuid(userUuid);
+        companyOrder.setUuid(UUID.randomUUID());
+        companyOrderRepository.save(companyOrder);
     }
 
     public void createProductOrder(ProductOrder productOrder, String email, UUID userUuid) {
@@ -55,13 +55,13 @@ public class OrderServiceImpl implements OrderService {
         });
     }
 
-    public void acceptedSiteOrder(Long id) {
-        siteOrderRepository.findById(id).ifPresent(order -> {
+    public void acceptedCompanyOrder(Long id) {
+        companyOrderRepository.findById(id).ifPresent(order -> {
             HttpClient httpClient = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("http://tracker:8080/api/accepted-site"))
+                    .uri(URI.create("http://tracker:8080/api/accepted-company"))
                     .header("X-UUID", order.getUserUuid().toString())
-                    .header("X-UUIDSite", order.getUuid().toString())
+                    .header("X-UUIDCompany", order.getUuid().toString())
                     .build();
             try {
                 httpClient.send(request, HttpResponse.BodyHandlers.ofString());

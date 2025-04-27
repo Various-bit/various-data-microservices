@@ -22,6 +22,9 @@ public class Product {
     @Column(name = "uuid")
     private UUID uuid;
 
+    @Column(name="label")
+    private String label;
+
     @Column(name = "company_id")
     private UUID companyUuid;
 
@@ -48,5 +51,8 @@ public class Product {
     @Column(name = "regions")
     @ElementCollection
     private List<String> regions;
+
+    @Column(name="category")
+    private UUID category;
 
 }

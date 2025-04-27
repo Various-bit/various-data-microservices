@@ -5,52 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/AuthorityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/error/AppError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/error/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/error/exception/NotAuthorized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/HealthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/ProductOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/SiteOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/ProductOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/SiteOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/AppError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/exception/NotAuthorized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/HealthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/trackerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/UserTrackedRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/AuthorizationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/AuthorizationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/src/main/java/org/example/comment/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment/src/main/java/org/example/comment/config/AuthorityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscribe/src/main/java/org/example/subscribe/entity/UserAuthority.java" beforeDir="false" afterPath="$PROJECT_DIR$/subscribe/src/main/java/org/example/subscribe/entity/UserAuthority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/support/src/main/java/org/example/support/entity/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/entity/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/support/src/main/java/org/example/support/service/impl/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/service/impl/ReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/SiteOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/CompanyOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/SiteOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/CompanyOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/trackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracked.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/UserTrackedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/UserTrackerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +33,8 @@
       <list>
         <option value="Enum" />
         <option value="Dockerfile" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -451,7 +422,9 @@
       <workItem from="1745349251210" duration="664000" />
       <workItem from="1745430161634" duration="3626000" />
       <workItem from="1745511904603" duration="9595000" />
-      <workItem from="1745608590449" duration="6654000" />
+      <workItem from="1745608590449" duration="7393000" />
+      <workItem from="1745621527922" duration="370000" />
+      <workItem from="1745739937826" duration="12066000" />
     </task>
     <servers />
   </component>

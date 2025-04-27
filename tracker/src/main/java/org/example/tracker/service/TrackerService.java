@@ -8,6 +8,10 @@ public interface TrackerService {
 
     void addProduct(UUID userUuid, UUID productUuid);
 
-    void addSite(UUID userUuid, UUID siteUuid);
+    void addCompany(UUID userUuid, UUID companyUuid);
+
+    void moveProduct(UUID userUuid, UUID productUuid, UUID categoryUuid);
+
+    void banProduct(UUID userUuid, UUID productUuid);
 
 }

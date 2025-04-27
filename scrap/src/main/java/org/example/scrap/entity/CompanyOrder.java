@@ -8,10 +8,10 @@ import java.sql.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name="site_order")
+@Table(name="company_order")
 @Getter
 @Setter
-public class SiteOrder {
+public class CompanyOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +35,6 @@ public class SiteOrder {
     @Column(name="user_uuid")
     private UUID userUuid;
 
-    public SiteOrder() {}
+    public CompanyOrder() {}
 
 }
