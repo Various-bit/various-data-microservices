@@ -5,6 +5,8 @@ volumes:
   pg_data_authority:
   pg_data_comment:
   pg_data_report:
+  pg_data_scrap:
+  pg_data_tracker:
 
 services:
   nginx:
@@ -19,6 +21,7 @@ services:
       - comment-ms
       - subscribe-ms
       - report-ms
+      - scrap-ms
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
   db-user:
@@ -73,6 +76,32 @@ services:
       - pg_data_report:/var/lib/postgresql/data
     ports:
       - '5436:5432'
+  db-scrap:
+    image: 'postgres'
+    container_name: db-scrap
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=scrap
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=scrap
+    volumes:
+      - pg_data_scrap:/var/lib/postgresql/data
+    ports:
+      - '5437:5432'
+  db-tracker:
+    image: 'postgres'
+    container_name: db-tracker
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_USER=tracker
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=tracker
+    volumes:
+      - pg_data_tracker:/var/lib/postgresql/data
+    ports:
+      - '5439:5432'
   authorization-ms:
     build: authorization/
     container_name: authorization-ms
@@ -125,12 +154,39 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db-report:5432/report
       - SPRING_DATASOURCE_USERNAME=report
       - SPRING_DATASOURCE_PASSWORD=password
-  frontend:
-    build: various_data_frontend/
-    container_name: frontend
+  scrap-ms:
+    build: scrap/
+    container_name: scrap-ms
     expose:
-      - '5173'
+      - '8080'
     ports:
-      - '5173:5173'
+      - '8084:8080'
     depends_on:
-      - nginx
+      - db-scrap
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-scrap:5432/scrap
+      - SPRING_DATASOURCE_USERNAME=scrap
+      - SPRING_DATASOURCE_PASSWORD=password
+  tracker-ms:
+    build: tracker/
+    container_name: tracker-ms
+    expose:
+      - '8080'
+    ports:
+      - '8085:8080'
+    depends_on:
+      - db-tracker
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-tracker:5432/tracker
+      - SPRING_DATASOURCE_USERNAME=tracker
+      - SPRING_DATASOURCE_PASSWORD=password
+
+#  frontend:
+#    build: various_data_frontend/
+#    container_name: frontend
+#    expose:
+#      - '5173'
+#    ports:
+#      - '5173:5173'
+#    depends_on:
+#      - nginx

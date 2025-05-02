@@ -17,12 +17,16 @@ public class AuthorityFilter implements Filter {
         final HttpServletRequest request = (HttpServletRequest) servletRequest;
         final HttpServletResponse response = (HttpServletResponse) servletResponse;
         final String HeaderAuthority = request.getHeader("X-Authority");
-        if ((request.getRequestURI().equals("api/scrap/sites") || request.getRequestURI().equals("api/scrap/sites")) &&
+        if ((request.getRequestURI().equals("/api/scrap/companies") ||
+                request.getRequestURI().equals("/api/scrap/products") ||
+                request.getRequestURI().equals("/api/scrap/accepted-company") ||
+                request.getRequestURI().equals("/api/scrap/accepted-product")) &&
                 (HeaderAuthority != null && HeaderAuthority.equals(Authority.ADMIN.name()))) {
             filterChain.doFilter(servletRequest, servletResponse);
-        } else if (HeaderAuthority != null && (HeaderAuthority.equals(Authority.ADMIN.name()) ||
-                HeaderAuthority.equals(Authority.SUBSCRIBER.name()))) {
-
+        } else if ((request.getRequestURI().equals("/api/scrap/product") ||
+                request.getRequestURI().equals("/api/scrap/company")) &&
+                (HeaderAuthority != null && (HeaderAuthority.equals(Authority.ADMIN.name()) ||
+                HeaderAuthority.equals(Authority.SUBSCRIBER.name())))) {
             filterChain.doFilter(request, response);
         } else {
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED);

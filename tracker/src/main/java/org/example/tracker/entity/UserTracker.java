@@ -22,18 +22,24 @@ public class UserTracker {
     private UUID uuid;
 
     @Column(name = "companies_uuid")
-    @ElementCollection
+    @Convert(converter = UUIDListConverter.class)
     private List<UUID> companiesUuid = new ArrayList<>();
 
     @Column(name = "tracker")
     private String tracker;
 
     @Column(name = "products_uuid")
-    @ElementCollection
+    @Convert(converter = UUIDListConverter.class)
     private List<UUID> productsUuid = new ArrayList<>();
 
     @Column(name = "bans_uuid")
-    @ElementCollection
+    @Convert(converter = UUIDListConverter.class)
     private List<UUID> bansUuid = new ArrayList<>();
 
+    public UserTracker() {}
+
+    public UserTracker(UUID uuid) {
+        this.uuid = uuid;
+        this.tracker = "";
+    }
 }

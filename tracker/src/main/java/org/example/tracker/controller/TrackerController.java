@@ -1,7 +1,8 @@
 package org.example.tracker.controller;
 
 import lombok.AllArgsConstructor;
-import org.apache.coyote.Response;
+import org.example.tracker.dto.BanProduct;
+import org.example.tracker.dto.MoveProduct;
 import org.example.tracker.entity.Product;
 import org.example.tracker.service.TrackerService;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,12 @@ public class TrackerController {
 
     TrackerService trackerService;
 
+    @RequestMapping("/create-user")
+    public ResponseEntity<String> createUser(@RequestHeader("X-UUID") UUID userUuid) {
+        trackerService.createUser(userUuid);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
     @RequestMapping("/add-product")
     public ResponseEntity<?> acceptedProduct(@RequestHeader("X-UUID") UUID userUuid,
                                              @RequestHeader("X-UUIDProduct") UUID productUuid) {
@@ -34,21 +41,23 @@ public class TrackerController {
     }
 
     @PostMapping("/move-product")
-    public ResponseEntity<?> moveProduct(@RequestHeader("X-UUID") UUID userUuid, @RequestBody UUID productUuid,
-                                         @RequestBody UUID categoryUuid) {
-        trackerService.moveProduct(userUuid, productUuid, categoryUuid);
+    public ResponseEntity<?> moveProduct(@RequestHeader("X-UUID") UUID userUuid, @RequestBody MoveProduct moveProduct) {
+        System.out.println("----------------START---------------");
+        System.out.println(moveProduct);
+        trackerService.moveProduct(userUuid, moveProduct.getProductUuid(), moveProduct.getCategoryUuid());
+        System.out.println("----------------END---------------");
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @PostMapping("/ban-product")
-    public ResponseEntity<?> banProduct(@RequestHeader("X-UUID") UUID userUuid,@RequestBody UUID productUuid) {
-        trackerService.banProduct(userUuid, productUuid);
+    public ResponseEntity<?> banProduct(@RequestHeader("X-UUID") UUID userUuid, @RequestBody BanProduct banProduct) {
+        trackerService.banProduct(userUuid, banProduct.getProductUuid());
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @GetMapping("/tracker")
-    public HashMap<Product, List<Product>> getTracker(@RequestHeader("X-UUID") UUID userUuid) {
-
+    public HashMap<String, List<Product>> getTracker(@RequestHeader("X-UUID") UUID userUuid) {
+        return trackerService.getTracker(userUuid);
     }
 
 }

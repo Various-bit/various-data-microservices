@@ -5,23 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/BanProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/MoveProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/DoubleListConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/SqlDateListConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/StringListConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UUIDListConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Various_Data_Microservices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Various_Data_Microservices.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/SiteOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/entity/CompanyOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/SiteOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/repository/CompanyOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/trackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/AuthorityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracked.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/UserTrackedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/UserTrackerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +40,8 @@
       <list>
         <option value="Enum" />
         <option value="Dockerfile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,44 +68,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AuthorizationApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CommentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AdminApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AuthorizationApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CommentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SubscribeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.VariousDataMicroservicesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/scrap/src/main/java/org/example/scrap&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.254023&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AuthorizationApplication.executor": "Run",
+    "Application.CommentApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AdminApplication.executor": "Run",
+    "Spring Boot.AuthorizationApplication.executor": "Run",
+    "Spring Boot.CommentApplication.executor": "Run",
+    "Spring Boot.SubscribeApplication.executor": "Run",
+    "Spring Boot.VariousDataMicroservicesApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/scrap",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.254023",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scrap" />
       <recent name="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker" />
       <recent name="$PROJECT_DIR$/tracker" />
-      <recent name="$PROJECT_DIR$/support/src/main/java/org/example/support" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/comment" />
@@ -424,7 +431,9 @@
       <workItem from="1745511904603" duration="9595000" />
       <workItem from="1745608590449" duration="7393000" />
       <workItem from="1745621527922" duration="370000" />
-      <workItem from="1745739937826" duration="12066000" />
+      <workItem from="1745739937826" duration="12471000" />
+      <workItem from="1745850024613" duration="1345000" />
+      <workItem from="1745953496980" duration="20279000" />
     </task>
     <servers />
   </component>

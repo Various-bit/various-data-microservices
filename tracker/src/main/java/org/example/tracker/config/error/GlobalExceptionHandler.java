@@ -1,6 +1,6 @@
 package org.example.tracker.config.error;
 
-import org.example.support.config.error.exception.NotAuthorized;
+import org.example.tracker.config.error.exception.NotAuthorized;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

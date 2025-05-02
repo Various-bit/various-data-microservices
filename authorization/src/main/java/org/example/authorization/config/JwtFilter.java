@@ -56,6 +56,7 @@ public class JwtFilter extends OncePerRequestFilter {
                 try {
                     authority = getAuthority(uuid);
                     email = userRepository.findByUuid(uuid).map(User::getEmail).orElse(null);
+                    System.out.println(email);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

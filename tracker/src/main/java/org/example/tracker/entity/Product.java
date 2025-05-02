@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Getter
@@ -35,12 +35,12 @@ public class Product {
     private Double discount;
 
     @Column(name = "prices")
-    @ElementCollection
-    private List<Double> prices;
+    @Convert(converter = DoubleListConverter.class)
+    private List<Double> prices = new ArrayList<>();
 
     @Column(name = "price_change_dates")
-    @ElementCollection
-    private List<Date> priceChangeDates;
+    @Convert(converter = SqlDateListConverter.class)
+    private List<Date> priceChangeDates = new ArrayList<>();
 
     @Column(name = "availability")
     private Boolean availability;
@@ -49,10 +49,12 @@ public class Product {
     private Date dateOfLoss;
 
     @Column(name = "regions")
-    @ElementCollection
-    private List<String> regions;
+    @Convert(converter = StringListConverter.class)
+    private List<String> regions = new ArrayList<>();
 
     @Column(name="category")
     private UUID category;
 
 }
+
+

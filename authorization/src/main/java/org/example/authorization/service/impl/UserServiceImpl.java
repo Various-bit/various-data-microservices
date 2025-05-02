@@ -34,7 +34,18 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setUuid(UUID.randomUUID());
         addAuthority(user.getUuid());
+        addTracker(user.getUuid());
         userRepository.save(user);
+    }
+
+    private void addTracker(UUID userUuid) throws IOException, InterruptedException {
+        System.out.println(userUuid);
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("http://tracker-ms:8080/api/create-user"))
+                .header("X-UUID", userUuid.toString())
+                .build();
+        httpClient.send(request, HttpResponse.BodyHandlers.ofString());
     }
 
     private void addAuthority(UUID uuid) throws IOException, InterruptedException {
