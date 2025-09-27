@@ -24,6 +24,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @AllArgsConstructor
 @Component
@@ -31,6 +32,8 @@ public class JwtFilter extends OncePerRequestFilter {
     private final JWTService jwtService;
     private final ApplicationContext applicationContext;
     private final UserRepository userRepository;
+    private final Logger logger = Logger.getLogger(JwtFilter.class.getName());
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -56,7 +59,6 @@ public class JwtFilter extends OncePerRequestFilter {
                 try {
                     authority = getAuthority(uuid);
                     email = userRepository.findByUuid(uuid).map(User::getEmail).orElse(null);
-                    System.out.println(email);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

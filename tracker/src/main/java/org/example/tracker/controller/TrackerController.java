@@ -42,12 +42,12 @@ public class TrackerController {
 
     @PostMapping("/move-product")
     public ResponseEntity<?> moveProduct(@RequestHeader("X-UUID") UUID userUuid, @RequestBody MoveProduct moveProduct) {
-        System.out.println("----------------START---------------");
-        System.out.println(moveProduct);
         trackerService.moveProduct(userUuid, moveProduct.getProductUuid(), moveProduct.getCategoryUuid());
-        System.out.println("----------------END---------------");
         return ResponseEntity.status(HttpStatus.OK).build();
     }
+
+
+//    TODO: ban-product not worked
 
     @PostMapping("/ban-product")
     public ResponseEntity<?> banProduct(@RequestHeader("X-UUID") UUID userUuid, @RequestBody BanProduct banProduct) {

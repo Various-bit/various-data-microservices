@@ -18,7 +18,8 @@ public class AuthorityFilter implements Filter {
         final HttpServletRequest request = (HttpServletRequest) servletRequest;
         final HttpServletResponse response = (HttpServletResponse) servletResponse;
         final String HeaderAuthority = request.getHeader("X-Authority");
-        if (request.getRequestURI().equals("/api/create-user")) {
+        System.out.println(request.getMethod());
+        if (request.getRequestURI().equals("/api/create-user") || request.getMethod().equals("OPTIONS")) {
             filterChain.doFilter(request, response);
         } else if (HeaderAuthority != null && (HeaderAuthority.equals(Authority.ADMIN.name()) ||
                 HeaderAuthority.equals(Authority.SUBSCRIBER.name()))) {

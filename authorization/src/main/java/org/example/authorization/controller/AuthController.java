@@ -2,6 +2,7 @@ package org.example.authorization.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
+import org.example.authorization.dto.JWT;
 import org.example.authorization.dto.LoginRequest;
 import org.example.authorization.dto.RefreshToken;
 import org.example.authorization.entity.User;
@@ -59,7 +60,9 @@ public class AuthController {
         );
         UUID uuid = jwtService.extractUUID(refreshToken.getToken());
         String token = jwtService.generateAccessToken(user, uuid, refreshToken);
-        return token != null ? ResponseEntity.ok().body(token) :
+        JWT jwt = new JWT();
+        jwt.setAccessToken(token);
+        return token != null ? ResponseEntity.ok().body(jwt) :
                 ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
 }

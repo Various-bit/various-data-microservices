@@ -5,30 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scrap/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/BanProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/MoveProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/DoubleListConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/SqlDateListConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/StringListConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UUIDListConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Various_Data_Microservices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Various_Data_Microservices.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comment/src/main/java/org/example/comment/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/JWTServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/JWTServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/AuthorityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scrap/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/error/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/entity/UserTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,37 +58,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AuthorizationApplication.executor": "Run",
-    "Application.CommentApplication.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AdminApplication.executor": "Run",
-    "Spring Boot.AuthorizationApplication.executor": "Run",
-    "Spring Boot.CommentApplication.executor": "Run",
-    "Spring Boot.SubscribeApplication.executor": "Run",
-    "Spring Boot.VariousDataMicroservicesApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-22",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/scrap",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.254023",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AuthorizationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CommentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthorizationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CommentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SubscribeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.VariousDataMicroservicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pavelbannikov/IdeaProjects/Various_Data_Microservices/scrap&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.254023&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scrap" />
@@ -114,11 +104,11 @@
       <recent name="org.example.authorization" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.tracker.controller" />
-      <recent name="org.example.scrap.controller" />
-      <recent name="org.example.support.controller" />
-      <recent name="org.example.subscribe.controller" />
-      <recent name="org.example.subscribe.entity" />
+      <recent name="org.example.authorization.config" />
+      <recent name="org.example.tracker.config" />
+      <recent name="org.example.support.config" />
+      <recent name="org.example.scrap.config" />
+      <recent name="org.example.comment.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,77 +146,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="authorization" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="authorization" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
     </configuration>
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
@@ -287,91 +206,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Autodetect">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="authorization" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
@@ -434,6 +268,15 @@
       <workItem from="1745739937826" duration="12471000" />
       <workItem from="1745850024613" duration="1345000" />
       <workItem from="1745953496980" duration="20279000" />
+      <workItem from="1746213977182" duration="1405000" />
+      <workItem from="1747324473628" duration="599000" />
+      <workItem from="1748031543601" duration="694000" />
+      <workItem from="1757348997726" duration="667000" />
+      <workItem from="1757759250520" duration="3306000" />
+      <workItem from="1757955913896" duration="8216000" />
+      <workItem from="1758225058956" duration="193000" />
+      <workItem from="1758225261002" duration="5566000" />
+      <workItem from="1758571149920" duration="13178000" />
     </task>
     <servers />
   </component>
