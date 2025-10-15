@@ -50,7 +50,9 @@ public class AuthController {
 
     @RequestMapping("/check")
     public ResponseEntity<?> check() {
-        return ResponseEntity.ok().build();
+        System.out.println("request get");
+        String username = userService.getCurrentUser().getUsername();
+        return ResponseEntity.ok().body(username);
     }
 
     @PostMapping(path="/refresh")

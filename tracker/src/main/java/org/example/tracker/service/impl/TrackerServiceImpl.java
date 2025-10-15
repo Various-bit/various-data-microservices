@@ -1,6 +1,8 @@
 package org.example.tracker.service.impl;
 
 import lombok.AllArgsConstructor;
+import org.example.tracker.dto.ProductView;
+import org.example.tracker.dto.Search;
 import org.example.tracker.entity.Category;
 import org.example.tracker.entity.Company;
 import org.example.tracker.entity.Product;
@@ -36,6 +38,7 @@ public class TrackerServiceImpl implements TrackerService {
             System.out.println("------------------" + userTracker.getTracker() + "---------------------");
             Map<UUID, List<UUID>> tracker = parseTracker(new JSONObject(userTracker.getTracker()));
             Product product = productRepository.findByUuid(productUuid);
+            System.out.println("product get");
             if (findCategoryExists(tracker, product)) {
                 tracker.put(product.getCategory(), new ArrayList<>());
                 tracker.get(product.getCategory()).add(product.getUuid());
@@ -50,7 +53,8 @@ public class TrackerServiceImpl implements TrackerService {
     public void addCompany(UUID userUuid, UUID companyUuid) {
         UserTracker userTracker = userTrackerRepository.findByUuid(userUuid);
         if (!userTracker.getCompaniesUuid().contains(companyUuid)) {
-            Company company = companyRepository.findByUuid(companyUuid);
+            Company company = companyRepository.findByUuid(companyUuid).orElse(null);
+            assert company != null;
             List<UUID> productsUuid = company.getProductsUuid();
             for (UUID productUuid : productsUuid) {
                 addProduct(userUuid, productUuid);
@@ -82,22 +86,36 @@ public class TrackerServiceImpl implements TrackerService {
         userTrackerRepository.save(userTracker);
     }
 
-    public HashMap<String, List<Product>> getTracker(UUID userUuid) {
+    public HashMap<String, List<ProductView>> getTracker(UUID userUuid) {
         UserTracker userTracker = userTrackerRepository.findByUuid(userUuid);
         Map<UUID, List<UUID>> trackerUuid = parseTracker(new JSONObject(userTracker.getTracker()));
-        HashMap<String, List<Product>> tracker = new HashMap<>();
+        HashMap<String, List<ProductView>> tracker = new HashMap<>();
         for (UUID categoryUuid : trackerUuid.keySet()) {
             parseProductsCategory(tracker, trackerUuid, categoryUuid);
         }
         return tracker;
     }
 
-    private void parseProductsCategory(HashMap<String, List<Product>> tracker, Map<UUID, List<UUID>> trackerUuid,
+    public List<Search> getProductList() {
+        List<Product> products = productRepository.findAll();
+        List<Search> searches = new ArrayList<>();
+        System.out.println("-----start find-----");
+        products.forEach(product -> {
+            searches.add(new Search(product.getLabel(), product.getUuid()));
+        });
+        System.out.println("------end find-------");
+        return searches;
+    }
+
+    private void parseProductsCategory(HashMap<String, List<ProductView>> tracker, Map<UUID, List<UUID>> trackerUuid,
                                        UUID categoryUuid) {
-        List<Product> categoryProducts = new ArrayList<>();
+        List<ProductView> categoryProducts = new ArrayList<>();
         String category = categoryRepository.findByUuid(categoryUuid).getLabel();
         trackerUuid.get(categoryUuid).forEach(productUuid -> {
-            categoryProducts.add(productRepository.findByUuid(productUuid));
+            Product product = productRepository.findByUuid(productUuid);
+            Company company = companyRepository.findByUuid(product.getCompanyUuid()).orElse(null);
+            categoryProducts.add(new ProductView(product,
+                    company != null ? company.getName() : "Not found"));
         });
         tracker.put(category, categoryProducts);
     }

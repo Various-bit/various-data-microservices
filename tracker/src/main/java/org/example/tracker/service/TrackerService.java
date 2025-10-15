@@ -1,5 +1,7 @@
 package org.example.tracker.service;
 
+import org.example.tracker.dto.ProductView;
+import org.example.tracker.dto.Search;
 import org.example.tracker.entity.Product;
 
 import java.util.HashMap;
@@ -16,8 +18,10 @@ public interface TrackerService {
 
     void banProduct(UUID userUuid, UUID productUuid);
 
-    HashMap<String, List<Product>> getTracker(UUID userUuid);
-
     void createUser(UUID userUuid);
+
+    HashMap<String, List<ProductView>> getTracker(UUID userUuid);
+
+    List<Search> getProductList();
 
 }

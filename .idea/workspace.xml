@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/comment/src/main/java/org/example/comment/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap/src/main/java/org/example/scrap/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/support/src/main/java/org/example/support/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/ProductView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/JWTServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/service/impl/JWTServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/config/AuthorityFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +66,7 @@
     &quot;Spring Boot.AuthorizationApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CommentApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SubscribeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TrackerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.VariousDataMicroservicesApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
@@ -120,7 +116,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommentApplication">
+  <component name="RunManager" selected="Spring Boot.TrackerApplication">
     <configuration name="AuthorizationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.authorization.AuthorizationApplication" />
       <module name="Various_Data_Microservices" />
@@ -276,7 +272,16 @@
       <workItem from="1757955913896" duration="8216000" />
       <workItem from="1758225058956" duration="193000" />
       <workItem from="1758225261002" duration="5566000" />
-      <workItem from="1758571149920" duration="13178000" />
+      <workItem from="1758571149920" duration="15122000" />
+      <workItem from="1759134840180" duration="2125000" />
+      <workItem from="1759219264663" duration="1686000" />
+      <workItem from="1759255785525" duration="2192000" />
+      <workItem from="1759319369182" duration="2916000" />
+      <workItem from="1759340554700" duration="6000" />
+      <workItem from="1759512771536" duration="4814000" />
+      <workItem from="1759908173718" duration="846000" />
+      <workItem from="1760019344154" duration="2874000" />
+      <workItem from="1760199067014" duration="3125000" />
     </task>
     <servers />
   </component>
@@ -285,6 +290,21 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="nginx.conf" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java</url>
+          <line>61</line>
+          <properties class="org.example.tracker.controller.TrackerController" method="getTracker">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

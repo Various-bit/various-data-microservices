@@ -3,7 +3,10 @@ package org.example.tracker.controller;
 import lombok.AllArgsConstructor;
 import org.example.tracker.dto.BanProduct;
 import org.example.tracker.dto.MoveProduct;
+import org.example.tracker.dto.ProductView;
+import org.example.tracker.dto.Search;
 import org.example.tracker.entity.Product;
+import org.example.tracker.entity.UserTracker;
 import org.example.tracker.service.TrackerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -56,8 +59,14 @@ public class TrackerController {
     }
 
     @GetMapping("/tracker")
-    public HashMap<String, List<Product>> getTracker(@RequestHeader("X-UUID") UUID userUuid) {
+    public HashMap<String, List<ProductView>> getTracker(@RequestHeader("X-UUID") UUID userUuid) {
         return trackerService.getTracker(userUuid);
+    }
+
+    @GetMapping("/product-list")
+    public List<Search> getProductList() {
+        System.out.println("------entry point------");
+        return trackerService.getProductList();
     }
 
 }
