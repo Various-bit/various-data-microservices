@@ -64,9 +64,8 @@ public class TrackerController {
     }
 
     @GetMapping("/product-list")
-    public List<Search> getProductList() {
-        System.out.println("------entry point------");
-        return trackerService.getProductList();
+    public List<Search> getProductList(@RequestHeader("X-UUID") UUID userUuid) {
+        return trackerService.getProductList(userUuid);
     }
 
 }

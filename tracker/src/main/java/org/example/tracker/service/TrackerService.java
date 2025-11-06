@@ -22,6 +22,6 @@ public interface TrackerService {
 
     HashMap<String, List<ProductView>> getTracker(UUID userUuid);
 
-    List<Search> getProductList();
+    List<Search> getProductList(UUID userUuid);
 
 }

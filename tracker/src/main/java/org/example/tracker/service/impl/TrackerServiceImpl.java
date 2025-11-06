@@ -35,10 +35,8 @@ public class TrackerServiceImpl implements TrackerService {
     public void addProduct(UUID userUuid, UUID productUuid) {
         UserTracker userTracker = userTrackerRepository.findByUuid(userUuid);
         if (!userTracker.getProductsUuid().contains(productUuid)) {
-            System.out.println("------------------" + userTracker.getTracker() + "---------------------");
             Map<UUID, List<UUID>> tracker = parseTracker(new JSONObject(userTracker.getTracker()));
             Product product = productRepository.findByUuid(productUuid);
-            System.out.println("product get");
             if (findCategoryExists(tracker, product)) {
                 tracker.put(product.getCategory(), new ArrayList<>());
                 tracker.get(product.getCategory()).add(product.getUuid());
@@ -78,11 +76,14 @@ public class TrackerServiceImpl implements TrackerService {
     public void banProduct(UUID userUuid, UUID productUuid) {
         UserTracker userTracker = userTrackerRepository.findByUuid(userUuid);
         Product product = productRepository.findByUuid(productUuid);
+        Map<UUID, List<UUID>> tracker = parseTracker(new JSONObject(userTracker.getTracker()), productUuid);
         if (userTracker.getCompaniesUuid().contains(product.getCompanyUuid())) {
             userTracker.getBansUuid().add(productUuid);
         } else {
+            System.out.println(userTracker.getProductsUuid());
             userTracker.getProductsUuid().remove(productUuid);
         }
+        userTracker.setTracker(new JSONObject(tracker).toString());
         userTrackerRepository.save(userTracker);
     }
 
@@ -96,14 +97,15 @@ public class TrackerServiceImpl implements TrackerService {
         return tracker;
     }
 
-    public List<Search> getProductList() {
+    public List<Search> getProductList(UUID userUuid) {
         List<Product> products = productRepository.findAll();
         List<Search> searches = new ArrayList<>();
-        System.out.println("-----start find-----");
-        products.forEach(product -> {
-            searches.add(new Search(product.getLabel(), product.getUuid()));
-        });
-        System.out.println("------end find-------");
+        List<UUID> alreadyProducts = userTrackerRepository.findByUuid(userUuid).getProductsUuid();
+        products.forEach(product -> searches.add(new Search(product.getLabel(),
+                companyRepository.findByUuid(product.getCompanyUuid())
+                        .map(Company::getName).orElse(null),
+                product.getUuid(), alreadyProducts.contains(product.getUuid())))
+        );
         return searches;
     }
 
@@ -123,10 +125,20 @@ public class TrackerServiceImpl implements TrackerService {
     private Map<UUID, List<UUID>> parseTracker(JSONObject json) {
         Map<UUID, List<UUID>> tracker = new HashMap<>();
         json.keys().forEachRemaining(key -> {
-            System.out.println(key);
-            System.out.println(key.getClass());
             JSONArray value = (JSONArray) json.get(key);
             tracker.put(UUID.fromString(key), parseTrackedProduct(value));
+        });
+        return tracker;
+    }
+
+    private Map<UUID, List<UUID>> parseTracker(JSONObject json, UUID exceptionUuid) {
+        Map<UUID, List<UUID>> tracker = new HashMap<>();
+        json.keys().forEachRemaining(key -> {
+            JSONArray value = (JSONArray) json.get(key);
+            List<UUID> trackedProduct = parseTrackedProduct(value, exceptionUuid);
+            if (!trackedProduct.isEmpty()) {
+                tracker.put(UUID.fromString(key), parseTrackedProduct(value, exceptionUuid));
+            }
         });
         return tracker;
     }
@@ -135,8 +147,18 @@ public class TrackerServiceImpl implements TrackerService {
         List<UUID> trackerProduct = new ArrayList<>();
         for (int i = 0; i < array.length(); i++) {
             String item = (String) array.get(i);
-            System.out.println(item);
             trackerProduct.add(UUID.fromString(item));
+        }
+        return trackerProduct;
+    }
+
+    private List<UUID> parseTrackedProduct(JSONArray array, UUID exceptionUuid) {
+        List<UUID> trackerProduct = new ArrayList<>();
+        for (int i = 0; i < array.length(); i++) {
+            String item = (String) array.get(i);
+            if (!UUID.fromString(item).equals(exceptionUuid)) {
+                trackerProduct.add(UUID.fromString(item));
+            }
         }
         return trackerProduct;
     }

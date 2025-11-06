@@ -7,13 +7,16 @@ import org.example.tracker.entity.Product;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
 @AllArgsConstructor
 public class ProductView {
     private String label;
+    private UUID uuid;
     private String companyName;
+    private UUID companyUuid;
     private Double currentPrice;
     private Double discount;
     private List<Double> prices;
@@ -24,7 +27,9 @@ public class ProductView {
 
     public ProductView(Product product, String companyName) {
         this.label = product.getLabel();
+        this.uuid = product.getUuid();
         this.companyName = companyName;
+        this.companyUuid = product.getCompanyUuid();
         this.currentPrice = product.getCurrentPrice();
         this.discount = product.getDiscount();
         this.prices = product.getPrices();

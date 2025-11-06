@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6259cc22-9f00-4ce6-beed-e84025fb280e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/ProductView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/src/main/java/org/example/authorization/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/controller/TrackerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/ProductView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/dto/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/TrackerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/src/main/java/org/example/tracker/service/impl/TrackerServiceImpl.java" afterDir="false" />
     </list>
@@ -282,6 +279,13 @@
       <workItem from="1759908173718" duration="846000" />
       <workItem from="1760019344154" duration="2874000" />
       <workItem from="1760199067014" duration="3125000" />
+      <workItem from="1760548019998" duration="5432000" />
+      <workItem from="1760941332936" duration="48000" />
+      <workItem from="1760970308418" duration="598000" />
+      <workItem from="1761149391234" duration="5375000" />
+      <workItem from="1761241212977" duration="1684000" />
+      <workItem from="1761579384964" duration="1195000" />
+      <workItem from="1762114430043" duration="3732000" />
     </task>
     <servers />
   </component>
